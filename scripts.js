@@ -13,25 +13,25 @@ var getSuit = function() {
             suit = "major arcana";
             return suit;
             break;
-        case 2:     
+        case 2:
         suit = "Wands";
         return suit;
-        break;      
+        break;
         case 3:
             suit = "Pentacles";
             return suit;
-            break;   
+            break;
         case 4:
             suit = "Swords";
             return suit;
-            break; 
-        case 5: 
+            break;
+        case 5:
             suit = "Cups";
             return suit;
-            break;     
+            break;
         default: suit = "major arcana";
         return suit;
-        break;  
+        break;
     }
 
 };
@@ -48,35 +48,46 @@ var getCard = function() {
                 break;
             case 12:
                 cardNumber = "Knight";
-                break;    
-            case 13: 
+                break;
+            case 13:
                 cardNumber = "Queen";
                 break;
             case 14:
                 cardNumber = "King";
-                break;        
+                break;
         }
         return cardNumber;
     }
 }
 
 function displayCard() {
-if (suit === "major arcana") {
-    var card = majorArcana[cardNumber];
-    console.log(`Your card is ${card}. Thanks for playing!`);
-    alert(`Your card is ${card}. Thanks for playing!`);
-} else {
-    console.log(`Your card is ${cardNumber} of ${suit}. Thanks for playing!`);
-    alert(`Your card is ${cardNumber} of ${suit}. Thanks for playing!`);
-}
+  $("#results-div").show();
+    if (suit === "major arcana") {
+        var card = majorArcana[cardNumber];
+        $("p#displayCard").append(`Your card is ${card}. Thanks for playing!`);
+        console.log(`Your card is ${card}. Thanks for playing!`);
+    } else {
+        console.log(`Your card is the ${cardNumber} of ${suit}. Thanks for playing!`);
+        $("p#displayCard").append(`Your card is ${cardNumber} of ${suit}. Thanks for playing!`);
+    }
 
 }
 
 //UI logic
 
+$(document).ready(function() {
+  $("form#tarot-survey").submit(function(event) {
+    event.preventDefault();
+    $("form#tarot-survey").hide();
+    getSuit();
+    getCard();
+    displayCard();
+
+
+  });
+});
+
 //Once the user presses the button or submits the form, run these:
-getSuit();
-getCard();
-displayCard();
-
-
+// getSuit();
+// getCard();
+// displayCard();

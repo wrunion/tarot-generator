@@ -14,7 +14,7 @@
 
 <body>
   <div class="container">
-    <h1>Tarot Rune Generator</h1>
+    <h1>Tarot Card Generator</h1>
     <!-- <h3>Answer a few questions to get your rune of the day!</h3> -->
     <br><br>
     <form id="tarot-survey">
@@ -28,14 +28,15 @@
       <input type="dropdown" id="number"> -->
         <!--put numbers 1-9 as dropdown selections here -->
       <!-- </input><br><br> -->
-      <button type="submit" id="submit-rune-survey" onclick="getRandomInteger()">Click to see your rune!</button>
+      <button type="submit" id="submit-rune-survey">Click here to draw a tarot card</button>
     </form>
   </div>
   <div class="container hidden" id="results-div">
     <!--summarize user responses-->
     <p id="results-summary"></p>
     <!--give the user their results-->
-    <p>Your card is:<span id="displayCard"></span>. Thanks for playing!</p>
+    <!-- <p>Your card is:<span id="displayCard"></span>. Thanks for playing!</p> -->
+    <p id="displayCard"></p>
     <p id="rune"></p>
     <p id="meaning"></p>
     <p id="interpretation"></p>
