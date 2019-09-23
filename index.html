@@ -9,7 +9,8 @@
   <link href="styles.css" rel="stylesheet" type="text/css">
   <!--jQuery CDN, followed by a link to my own scripts file-->
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
-  <script src="scripts.js"></script>
+  <!--<script src="scripts.js"></script>-->
+  <script src="scripts2.js"></script>
 </head>
 
 <body>
@@ -28,10 +29,23 @@
       <input type="dropdown" id="number"> -->
         <!--put numbers 1-9 as dropdown selections here -->
       <!-- </input><br><br> -->
-      <button type="submit" id="submit-rune-survey">Click here to draw a tarot card</button>
+      <button type="submit" id="submit-rune-survey">Click here to draw three tarot cards</button>
     </form>
   </div>
   <div class="container hidden" id="results-div">
+    <div class = "row">
+      <div class = "col col-sm-4" id="results-col-1">
+
+      </div>
+      <div class = "col col-sm-4" id="results-col-2">
+  
+      </div>
+      <div class ="col col-sm-4" id="results-col-3">
+
+      </div>
+    </div>
+
+
     <!--summarize user responses-->
     <p id="results-summary"></p>
     <!--give the user their results-->
@@ -41,7 +55,8 @@
     <p id="meaning"></p>
     <p id="interpretation"></p>
     <br><br>
-    <button onclick="location.reload()">Click to draw another card</button>
+    <!--CHANGE THIS BELOW SO THAT YOU CAN DRAW MULTIPLE CARDS AND STACK THEM UP-->
+    <button onclick="location.reload()">Click to clear this spread and draw again!</button>
     <br><br>
     <!-- <button id="learn-more">Learn more about the runes!</button> -->
   </div>
