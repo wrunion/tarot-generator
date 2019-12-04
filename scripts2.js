@@ -5,7 +5,7 @@
 // Wands, Cups, Swords, Pentacles
 // Page Knight Queen King
 
-var cards = [
+const masterDeck = [
   {number: 0, name: "The Fool", url: "https://upload.wikimedia.org/wikipedia/en/9/90/RWS_Tarot_00_Fool.jpg"},
   {number: 1, name: 'The Magician', url: "https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg"},
   {number: 2, name: 'The High Priestess', url: "https://upload.wikimedia.org/wikipedia/en/8/88/RWS_Tarot_02_High_Priestess.jpg"},
@@ -71,6 +71,42 @@ var cards = [
   {number:52, name:'Queen of Swords', url:"https://upload.wikimedia.org/wikipedia/en/d/d4/Swords13.jpg"},
   {number:53, name:'King of Swords', url:"https://upload.wikimedia.org/wikipedia/en/3/33/Swords14.jpg"}
 ];
+
+
+//WHEN A USER PICKS A SPREAD:
+
+function newSpread() {
+  let currentDeck = [...masterDeck];
+  shuffle();
+  let drawnCards = [];
+}
+
+function shuffle() {
+  //shuffle the deck
+}
+
+function drawTopCard() {
+  let card = currentDeck.shift();
+  //display card.url
+  drawnCards.push(card);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 var getCard = function() {
     return Math.floor(Math.random()*54);
